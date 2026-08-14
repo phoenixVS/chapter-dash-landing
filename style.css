@@ -1,0 +1,155 @@
+:root {
+  --bg: #ffffff;
+  --text: #1a1a2e;
+  --muted: #5a5a72;
+  --accent: #5b4fe9;
+  --border: #e6e6f0;
+  --card: #f7f7fc;
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.wrap {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 5rem;
+}
+
+header.page-header {
+  margin-bottom: 2.5rem;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.brand .dot {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background: var(--accent);
+  display: inline-block;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 1.5rem 0 0.25rem;
+}
+
+.meta {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-bottom: 0;
+}
+
+.doc-nav {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+
+.doc-nav a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.doc-nav a:hover { text-decoration: underline; }
+
+section {
+  margin: 2.25rem 0;
+}
+
+h2 {
+  font-size: 1.25rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.9rem;
+}
+
+h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+}
+
+p, li { color: var(--text); }
+
+ul, ol {
+  padding-left: 1.3rem;
+}
+
+li { margin-bottom: 0.4rem; }
+
+.callout {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  margin: 1rem 0;
+}
+
+.callout.todo {
+  border-color: #f0c94a;
+  background: #fffaeb;
+}
+
+.callout.todo strong { color: #8a6d00; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.95rem;
+}
+
+th, td {
+  text-align: left;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--border);
+  vertical-align: top;
+}
+
+th {
+  background: var(--card);
+}
+
+a { color: var(--accent); }
+
+footer.page-footer {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #14141f;
+    --text: #eceaf5;
+    --muted: #a7a4bf;
+    --accent: #8f85ff;
+    --border: #2a2a3d;
+    --card: #1c1c2b;
+    color-scheme: dark;
+  }
+  .callout.todo {
+    background: #2a2412;
+    border-color: #7a6317;
+  }
+  .callout.todo strong { color: #f0c94a; }
+}
